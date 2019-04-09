@@ -1,7 +1,7 @@
-import { vistaTemplate } from './router.js';
-import { initRouter } from './router.js';
+// import { vistaTemplate } from './router.js';
+// import { initRouter } from './router.js';
 
-window.addEventListener('load', () => {
-    vistaTemplate();
-    initRouter();
-});
+// window.addEventListener('load', () => {
+//     vistaTemplate();
+//     initRouter();
+// });
