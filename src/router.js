@@ -1,38 +1,26 @@
-import { templateMenu } from './templatesMenu.js'
+import home from '../UI/home.js'
+import menu from '../UI/menu.js'
+export const templatePedido = (rutas) => {
+  const router = rutas.substr(2, rutas.length -2);
+  const pedido = document.getElementById('pedido');
+  pedido.innerHTML = '';
+  switch (router) {
+    case 'home':
+    pedido.appendChild(home());
+    break;
+    case 'menu':
+    pedido.appendChild(menu());
+    break;
+  };
+};
 
-const changeTmp = (hash) => {
-  if (hash === '#/' || hash === '' || hash === '#') {
-    return viewTmp('#/home');
-  } else if (hash === '#/inicio' || hash === '#/menu' || hash === '#/pedido') {
-    return viewTmp(hash);
-  } else {
-    return viewTmp('#/different');
-  }
-}
+export const cambio = (hash) => {
+  if( hash === '#/home' || hash === '#/menu') return templatePedido(hash);
+  else return templatePedido('#/home');
+};
 
-const viewTmp = (routers) => {
-  const router = routers.substr(2, routers.length - 2)
-  const container = document.getElementById("container")
-  container.innerHTML = templateMenu[router];
-}
-
-window.addEventListener('load', changeTmp(window.location.hash))
-if (("onhashchange" in window)) window.onhashchange = () => changeTmp(window.location.hash)
-// import { total } from './templatesMenu.js';
-
-// export const vistaTemplate = (routers) => {
-//     const router = routers.substr(2, routers.length - 2);
-//     const pedido = document.getElementById('pedido');
-//     container.innerHTML = '';
-//     switch (router) {
-//         case 'total':
-//         pedido.appendChild(total());
-//         break;
-//     };
-// };
-
-// export const initRouter = () => {
-//     window.addEventListener('load', vistaTemplate(window.location.hash))
-//     if (('onhashchange' in window)) window.onhashchange = () => vistaTemplate(window.location.hash)
-//   }
-
+export const enrutador = () => {
+  window.addEventListener('load', cambio(window.location.hash))
+  if (('onhashchange' in window)) window.onhashchange = () => cambio((window.location.hash));
+  
+} 
