@@ -1,3 +1,9 @@
-.center-items{
-    background-color: rgba(0, 0, 0, 0.692)
+/* @media (min-width: 768px) { 
 }
+
+@media (max-width: 991.98px) {  
+ } */
+
+ body {
+    background-image: url(https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg);
+ }  
