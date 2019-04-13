@@ -2,9 +2,8 @@ export default () => {
   const formElement = document.createElement('form');
   const formPedido = `
   <div>
-  <h2>Inicio</h2>
-  <input id="name" type="text" placeholder="nombre del cliente"> 
-  <button id="btn-menu">PEDIDO</button>
+  <input class="input-inicio" id="name" type="text" placeholder="nombre del cliente"> 
+  <button type="button" id="btn-menu">PEDIDO</button>
   </div>`;
   formElement.setAttribute('id', 'frm-home');
   formElement.innerHTML = formPedido;
