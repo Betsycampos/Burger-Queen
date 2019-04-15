@@ -9,8 +9,25 @@ export default () => {
   formElement.innerHTML = formPedido;
   // document.getElementById('home').innerHTML = '';  
   const btnPedido = formElement.querySelector('#btn-menu');
+  const input= formElement.querySelector('#name');
   btnPedido.addEventListener('click', () => {
+    
     window.location.hash = '#/menu';
   });
   return formElement;
 };
+
+// const probandoLocalS = () => {
+//   let menu = {
+//     item ="hamburguesa doble - pollo",
+//     name = "",
+//     precio =15,
+//     tipo = "hamburguesa"
+//   };
+// };
+
+// const name = "";
+
+// localStorage.setItem('nombre', name);
+
+// return name;
