@@ -7,14 +7,12 @@ export default () => {
   </div>`;
   formElement.setAttribute('id', 'frm-home');
   formElement.innerHTML = formPedido;
-  // document.getElementById('home').innerHTML = '';  
   const btnPedido = formElement.querySelector('#btn-menu');
   btnPedido.addEventListener('click', () => {
   const input= formElement.querySelector('#name').value;
   localStorage.setItem('nombre', input);
-  document.getElementById('name').value;
-    window.location.hash = '#/menu';
+  // document.getElementById('name').value;
+  window.location.hash = '#/menu';
   });
   return formElement;
 };
-
