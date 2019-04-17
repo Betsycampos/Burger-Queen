@@ -10,16 +10,7 @@ button{
 }
 .pedido {
     padding: 0
-}
-.container {
-    /* background-color: rgba(197, 115, 15, 0.863); */
-}
-/* 
-.comida {
-    background-image: url(../img/burguesa1.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-} */
+}                                  
 body{
     background-image: url(../img/burguesa1.jpg);
     background-size: 100%;  
@@ -31,3 +22,6 @@ cite {
     color: blanchedalmond;
 }
 /* flex */
+.input-inicio {
+    padding: 40%;
+}
