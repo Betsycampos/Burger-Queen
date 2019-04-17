@@ -6,6 +6,7 @@ export default () => {
     <input type="text" id="cliente">
     <input type="number" id="codigo" placeholder="Cantidad">
     <button type="button"id="btn-home">Inicio</button>
+    
     </div>`;
     formElement.setAttribute('id', 'frm-home');
     formElement.innerHTML = formPedido;
@@ -17,8 +18,3 @@ export default () => {
     });
     return formElement;
   };
-
-// export const pedidos = () => {
-//     const formElement =
-
-// }

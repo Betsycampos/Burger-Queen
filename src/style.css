@@ -7,11 +7,25 @@ button{
 
 .input-inicio {
     border-radius: 10%;
-   
 }
-/* body{ */
-    /* background-image: url(https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg); */
-/* } */
+.pedido {
+    padding: 0
+}
+.container {
+    /* background-color: rgba(197, 115, 15, 0.863); */
+}
+/* 
+.comida {
+    background-image: url(../img/burguesa1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+} */
+body{
+    background-image: url(../img/burguesa1.jpg);
+    background-size: 100%;  
+    /* background-color: rgba(0, 0, 0, 0.795); */
+background-repeat: no-repeat;
+}
 
 cite {
     color: blanchedalmond;
