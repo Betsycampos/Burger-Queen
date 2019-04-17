@@ -7,6 +7,9 @@ button{
 
 .input-inicio {
     border-radius: 10%;
+    margin:2%; 
+    /* display: -webkit-inline-flex; */
+    
 }
 .pedido {
     padding: 0
