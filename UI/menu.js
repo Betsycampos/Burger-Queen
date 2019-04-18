@@ -4,9 +4,13 @@ export default () => {
     <div>
     <h2>Menú</h2>
     <input type="text" id="cliente">
-    <input type="number" id="codigo" placeholder="Cantidad">
     <button type="button"id="btn-home">Inicio</button>
-    
+    <div class="container">
+    <div class="row">
+    <div class="col-6">
+    </div>
+    </div>
+    </div>
     </div>`;
     formElement.setAttribute('id', 'frm-home');
     formElement.innerHTML = formPedido;

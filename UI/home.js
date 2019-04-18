@@ -1,10 +1,19 @@
 export default () => {
   const formElement = document.createElement('form');
-  const formPedido = `
-  <div>
-  <input class="input-inicio" id="name" type="text" placeholder="nombre del cliente"> 
-  <button type="button" id="btn-menu">PEDIDO</button>
-  </div>`;
+
+  const formPedido =`
+  <div class="container-nombre">
+    <div class="container-input">
+    <input class="input-inicio" id="name" type="text" placeholder="nombre del cliente">
+    <button type="button" id="btn-menu">PEDIDO</button>
+    </div>
+  </div>
+  `;
+  // const formPedido = `
+  // <div>
+  // <input class="input-inicio" id="name" type="text" placeholder="nombre del cliente"> 
+  // <button type="button" id="btn-menu">PEDIDO</button>
+  // </div>`;
   formElement.setAttribute('id', 'frm-home');
   formElement.innerHTML = formPedido;
   const btnPedido = formElement.querySelector('#btn-menu');

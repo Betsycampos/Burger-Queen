@@ -1,24 +1,46 @@
+body{
+  height: 100vh;
+}
 menu{
    position : relative; 
 }
 button{
-    border-radius: 10%;
+    border-radius: 6%;  
 }
 
-.input-inicio {
+/* .input-inicio {
     border-radius: 10%;
     margin:2%; 
-    /* display: -webkit-inline-flex; */
+    display: flex;
+    display: -webkit-inline-flex;
     
+} */
+
+.container-nombre{
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  height: 600px;
+  width: 100%;
+
+
+}
+
+.container-input{
+  
 }
 .pedido {
     padding: 0
 }                                  
 body{
     background-image: url(../img/burguesa1.jpg);
-    background-size: 100%;  
+    background-size: 100%; 
+    background-position: center;
+    background-size: auto; 
     /* background-color: rgba(0, 0, 0, 0.795); */
-background-repeat: no-repeat;
+/* background-repeat: no-repeat; */
 }
 
 cite {
