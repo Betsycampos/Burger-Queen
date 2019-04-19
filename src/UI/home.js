@@ -9,11 +9,6 @@ export default () => {
     </div>
   </div>
   `;
-  // const formPedido = `
-  // <div>
-  // <input class="input-inicio" id="name" type="text" placeholder="nombre del cliente"> 
-  // <button type="button" id="btn-menu">PEDIDO</button>
-  // </div>`;
   formElement.setAttribute('id', 'frm-home');
   formElement.innerHTML = formPedido;
   const btnPedido = formElement.querySelector('#btn-menu');
@@ -21,7 +16,7 @@ export default () => {
   const input= formElement.querySelector('#name').value;
   localStorage.setItem('nombre', input);
   // document.getElementById('name').value;
-  window.location.hash = '#/menu';
+  window.location.hash = '#/desayuno';
   });
   return formElement;
 };
