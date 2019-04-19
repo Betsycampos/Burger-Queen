@@ -8,8 +8,7 @@ export const configFirebase = () => {   // Initialize Firebase
     messagingSenderId: "695085114950"
   };
   firebase.initializeApp(config);
-}
-
+};
 
   
 
