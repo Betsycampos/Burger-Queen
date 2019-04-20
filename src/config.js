@@ -13,7 +13,8 @@
 const db = firebase.firestore();
 db.settings({
   timestampsInSnapshots: true
-});
+}
+);
 
 db.collection("almuerzo-cena").get().then(function(querySnapshot) {
   querySnapshot.forEach(function(doc) {
@@ -21,6 +22,7 @@ db.collection("almuerzo-cena").get().then(function(querySnapshot) {
       console.log(doc.id, " => ", doc.data());
   });
 });
+
 
 
 
