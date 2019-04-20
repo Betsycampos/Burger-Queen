@@ -1,4 +1,4 @@
-export const configFirebase = () => {   // Initialize Firebase
+  // Initialize Firebase
   const config = {
     apiKey: "AIzaSyAHafw898Kfjx6jaMx72vwK_UJhJXzdsuU",
     authDomain: "burger-queen-76a21.firebaseapp.com",
@@ -8,18 +8,19 @@ export const configFirebase = () => {   // Initialize Firebase
     messagingSenderId: "695085114950"
   };
   firebase.initializeApp(config);
-};
+  
 
 const db = firebase.firestore();
-db.settings({timestampsInSnapshots: true});
-console.log(db);
+db.settings({
+  timestampsInSnapshots: true
+});
 
-// //   const db = firebase.firestore();
-// // db.settings({timestampsInSnapshots: true});
+db.collection("almuerzo-cena").get().then(function(querySnapshot) {
+  querySnapshot.forEach(function(doc) {
+      // doc.data() is never undefined for query doc snapshots
+      console.log(doc.id, " => ", doc.data());
+  });
+});
 
-// db.collection('desayuno').get().then((snapshot) => {
-//   console.log(snapshot.doc); 
-// });
-// // 
-// // export const db = firebase.firestore();
-// // db.settings({timestampsInSnapshots: true});
+
+
