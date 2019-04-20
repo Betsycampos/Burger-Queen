@@ -10,16 +10,16 @@ export const configFirebase = () => {   // Initialize Firebase
   firebase.initializeApp(config);
 };
 
-// const db = firebase.firestore();
-// db.settings({timestampsInSnapshots: true});
-// console.log(db);
+const db = firebase.firestore();
+db.settings({timestampsInSnapshots: true});
+console.log(db);
 
 // //   const db = firebase.firestore();
 // // db.settings({timestampsInSnapshots: true});
 
-// // db.collection('desayuno').get().then((snapshot) => {
-// //   console.log(snapshot.doc); 
-// // });
+// db.collection('desayuno').get().then((snapshot) => {
+//   console.log(snapshot.doc); 
+// });
 // // 
 // // export const db = firebase.firestore();
 // // db.settings({timestampsInSnapshots: true});
