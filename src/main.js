@@ -1,7 +1,7 @@
 // import {configFirebase} from './config';
-// import {enrutador} from './router.js';
+import {enrutador} from './router.js';
 
-// window.addEventListener('load', () => {
-//   // configFirebase();
-//   enrutador();
-// });
+window.addEventListener('load', () => {
+  // configFirebase();
+  enrutador();
+});
