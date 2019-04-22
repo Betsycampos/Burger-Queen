@@ -1,3 +1,4 @@
+import { menuAlmuerzo } from '../firebase-controller.js';
 export const desayuno = () => {
     const formElement = document.createElement('form');
     const formPedido = `
@@ -12,6 +13,9 @@ export const desayuno = () => {
     </div>
     </div>
     </div>`;
+    formElement.innerHTML = formPedido
+    menuAlmuerzo(desayuno);
+   
     formElement.setAttribute('id', 'frm-home');
     formElement.innerHTML = formPedido;
     const btnRetorno = formElement.querySelector('#btn-home');
