@@ -3,10 +3,27 @@ export const menuAlmuerzo = (callback) =>
   .onSnapshot((querySnapshot) => {
     const arrAlmuerzo = [];
     querySnapshot.forEach((doc) => {
-      arrAlmuerzo.push({id: doc.id, ...doc.data()});
+      arrAlmuerzo.push({
+        id: doc.data().id,
+        item: doc.data().item,
+        precio: doc.data().precio,
+        tipo: doc.data().tipo
     });
-    callback(arrAlmuerzo);
   });
+    callback(arrAlmuerzo);
+
+  });
+
+//leer documentos
+// export const leeAlmuerzo = (menuAlmuerzo) =>
+//   firebase.firestore().collection("almuerzo-cena")
+//   .onSnapshot((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//       console.log(`${doc.id} => ${doc.data()}`);
+//     });
+
+//   });
+  
   
 
 
