@@ -34,11 +34,11 @@ export const desayuno = (product) => {
     formElement.innerHTML = formPedido
     var tabla = document.getElementById("tableProducts")
 
-    menuAlmuerzo(dataProduct =>{
+    menuAlmuerzo(dataProduct =>
       dataProduct.forEach(element => {
         tableProducts.appendChild(product(element))
-      });
-    });
+      }));
+  
    
     formElement.setAttribute('id', 'frm-home');
     formElement.innerHTML = formPedido;

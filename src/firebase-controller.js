@@ -14,28 +14,3 @@ export const menuAlmuerzo = (callback) =>
 
   });
 
-//leer documentos
-// export const leeAlmuerzo = (menuAlmuerzo) =>
-//   firebase.firestore().collection("almuerzo-cena")
-//   .onSnapshot((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//       console.log(`${doc.id} => ${doc.data()}`);
-//     });
-
-//   });
-  
-  
-
-
-// const db = firebase.firestore();
-// db.settings({
-//   timestampsInSnapshots: true
-// }
-// );
-
-// db.collection("almuerzo-cena").get().then(function(querySnapshot) {
-//   querySnapshot.forEach(function(doc) {
-//       // doc.data() is never undefined for query doc snapshots
-//       console.log(doc.id, " => ", doc.data());
-//   });
-// });
