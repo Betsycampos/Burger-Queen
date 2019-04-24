@@ -1,5 +1,5 @@
 import home from './UI/home.js'
-import {desayunos} from './UI/menu.js'
+import {desayunos, paintDesayuno} from './UI/menu.js'
 import{desayuno} from './firebase-controller.js'
 
 export const templatePedido = (rutas) => {
@@ -12,6 +12,7 @@ export const templatePedido = (rutas) => {
    break;
    case 'desayuno':
    desayuno((data) => {
+     
      pedido.appendChild(desayunos(data));
    })
    break;

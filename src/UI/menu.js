@@ -1,6 +1,7 @@
 import { desayuno } from '../firebase-controller.js';
 
-export const desayunos = (dataDesayuno) => {
+export const desayunos = (data) => {
+  console.log(data)
    const formElement = document.createElement('form');
    const formPedido = `
    <div>
@@ -8,13 +9,12 @@ export const desayunos = (dataDesayuno) => {
    <input type="text" id="cliente">
    <button type="button"id="btn-home">Inicio</button>
    <div class="container">
-   <div class="row">
-   <div class="col-6">
-   </div>
-   </div>
+   ${paintDesayuno(data)}
+   
    </div>
    </div>`;
    formElement.innerHTML = formPedido
+  //  desayuno(paintDesayuno);
 
    formElement.setAttribute('id', 'frm-home');
    // formElement.innerHTML = formPedido;
@@ -26,6 +26,28 @@ export const desayunos = (dataDesayuno) => {
    btnRetorno.addEventListener('click', () => {
    window.location.hash = '#/home';
    });
-
+  //  paintDesayuno(data);
    return formElement;
- };  
+ };
+
+ export const paintDesayuno = (dataDesayuno) => {
+   let listaDesayunos = '';
+   dataDesayuno.forEach((doc) => {
+     const formPedido = `
+     <div class="container">
+     <div id="desayunoo">
+     <ul>
+     <li id="text-${doc.item}"> 
+     ${doc.item} 
+     ${doc.precio}
+     </li>
+     </ul>
+     </div>
+     </div>
+     `;
+     listaDesayunos +=formPedido;
+   });
+ 
+ 
+   return listaDesayunos;
+ };
