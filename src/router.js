@@ -1,5 +1,6 @@
 import home from './UI/home.js'
 import {desayunos, paintDesayuno} from './UI/menu.js'
+import {almuerzos} from './UI/restoDia.js'
 import{desayuno} from './firebase-controller.js'
 
 export const templatePedido = (rutas) => {
@@ -10,17 +11,24 @@ export const templatePedido = (rutas) => {
    case 'home':
    pedido.appendChild(home());
    break;
-   case 'desayuno':
+
+   case 'desayunos':
    desayuno((data) => {
-     
      pedido.appendChild(desayunos(data));
    })
    break;
+
+   case 'almuerzos':
+   almuerzo((data) => {
+     pedido.appendChild(almuerzos(data));
+   })
+   break;
+  
  };
 };
 
 export const cambio = (hash) => {
- if( hash === '#/home' || hash === '#/desayuno') return templatePedido(hash);
+ if( hash === '#/home' || hash === '#/desayunos' ) return templatePedido(hash);
  else return templatePedido('#/home');
 };
 

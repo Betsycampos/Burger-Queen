@@ -1,7 +1,6 @@
 import { desayuno } from '../firebase-controller.js';
 
 export const desayunos = (data) => {
-  console.log(data)
    const formElement = document.createElement('form');
    const formPedido = `
    <div>
@@ -14,19 +13,15 @@ export const desayunos = (data) => {
    </div>
    </div>`;
    formElement.innerHTML = formPedido
-  //  desayuno(paintDesayuno);
-
    formElement.setAttribute('id', 'frm-home');
-   // formElement.innerHTML = formPedido;
    // Se guarda nombre del cliente
    const btnRetorno = formElement.querySelector('#btn-home');
    const nombre = localStorage.getItem('nombre');
    formElement.querySelector('#cliente').value = nombre;
-   // Me retorna a inicio
+   // Retorna a inicio
    btnRetorno.addEventListener('click', () => {
    window.location.hash = '#/home';
    });
-  //  paintDesayuno(data);
    return formElement;
  };
 
@@ -37,10 +32,10 @@ export const desayunos = (data) => {
      <div class="container">
      <div id="desayunoo">
      <ul>
-     <li id="text-${doc.item}"> 
-     ${doc.item} 
-     ${doc.precio}
-     </li>
+     <button id="text-${doc.item}"> ${doc.item}
+     </button>
+     <button id="text-${doc.item}"> ${doc.precio}
+     </button>
      </ul>
      </div>
      </div>
@@ -51,3 +46,7 @@ export const desayunos = (data) => {
  
    return listaDesayunos;
  };
+ /**
+  * 
+  * 
+  */

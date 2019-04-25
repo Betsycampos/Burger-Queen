@@ -9,6 +9,17 @@ export const desayuno = (callback) =>
    // console.log(`${doc.id} => ${doc.data().item}.`);
  });
 
+ export const almuerzo = (callback) =>
+ firebase.firestore().collection("almuerzo-cena")
+ .onSnapshot((querySnapshot) => {
+   const arrDesayuno = [];
+   querySnapshot.forEach((doc) => {
+     arrDesayuno.push({id: doc.id, ...doc.data()});
+   });
+   callback(arrDesayuno);
+   // console.log(`${doc.id} => ${doc.data().item}.`);
+ });
+
 
 // export const menuAlmuerzo = (callback) =>
 //   firebase.firestore().collection("almuerzo-cena")

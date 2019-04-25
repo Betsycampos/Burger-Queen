@@ -16,7 +16,7 @@ export default () => {
   const input= formElement.querySelector('#name').value;
   localStorage.setItem('nombre', input);
   // document.getElementById('name').value;
-  window.location.hash = '#/desayuno';
+  window.location.hash = '#/desayunos';
   });
   return formElement;
 };
