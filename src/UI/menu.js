@@ -1,6 +1,7 @@
 import { desayuno } from '../firebase-controller.js';
 
 export const desayunos = (data) => {
+  // console.log(data)
    const formElement = document.createElement('form');
    const formPedido = `
    <div>
@@ -9,7 +10,6 @@ export const desayunos = (data) => {
    <button type="button"id="btn-home">Inicio</button>
    <div class="container">
    ${paintDesayuno(data)}
-   
    </div>
    </div>`;
    formElement.innerHTML = formPedido
