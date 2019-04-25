@@ -1,5 +1,4 @@
 export const almuerzos = (data) => {
-    console.log(data)
      const formElement = document.createElement('form');
      const formPedido = `
      <div>
@@ -8,7 +7,6 @@ export const almuerzos = (data) => {
      <button type="button"id="btn-home">Inicio</button>
      <div class="container">
      ${paintAlmuerzo(data)}
-     
      </div>
      </div>`;
      formElement.innerHTML = formPedido
@@ -41,7 +39,5 @@ export const almuerzos = (data) => {
        `;
        listaAlmuerzos +=formPedido;
      });
-   
-   
      return listaAlmuerzos;
    };
