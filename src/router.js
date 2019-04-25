@@ -1,7 +1,7 @@
 import home from './UI/home.js'
 import {desayunos, paintDesayuno} from './UI/menu.js'
 import {almuerzos} from './UI/restoDia.js'
-import{desayuno} from './firebase-controller.js'
+import{desayuno, almuerzo} from './firebase-controller.js'
 
 export const templatePedido = (rutas) => {
  const router = rutas.substr(2, rutas.length -2);
@@ -28,7 +28,7 @@ export const templatePedido = (rutas) => {
 };
 
 export const cambio = (hash) => {
- if( hash === '#/home' || hash === '#/desayunos' ) return templatePedido(hash);
+ if( hash === '#/home' || hash === '#/desayunos' || hash === '#/almuerzos' ) return templatePedido(hash);
  else return templatePedido('#/home');
 };
 
