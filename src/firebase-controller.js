@@ -12,11 +12,11 @@ export const desayuno = (callback) =>
  export const almuerzo = (callback) =>
  firebase.firestore().collection("almuerzo-cena")
  .onSnapshot((querySnapshot) => {
-   const arrDesayuno = [];
+   const arrAlmuerzo = [];
    querySnapshot.forEach((doc) => {
-     arrDesayuno.push({id: doc.id, ...doc.data()});
+     arrAlmuerzo.push({id: doc.id, ...doc.data()});
    });
-   callback(arrDesayuno);
+   callback(arrAlmuerzo);
    // console.log(`${doc.id} => ${doc.data().item}.`);
  });
 
