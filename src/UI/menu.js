@@ -32,9 +32,9 @@ export const desayunos = (data) => {
      <div class="container">
      <div id="desayunoo">
      <ul>
-     <button id="text-${doc.item}"> ${doc.item}
+     <button type="button" id="text-${doc.item}"> ${doc.item}
      </button>
-     <button id="text-${doc.item}"> ${doc.precio}
+     <button type="button" id="text-${doc.item}"> ${doc.precio}
      </button>
      </ul>
      </div>

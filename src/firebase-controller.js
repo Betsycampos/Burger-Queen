@@ -6,8 +6,7 @@ export const desayuno = (callback) =>
      arrDesayuno.push({id: doc.id, ...doc.data()});
    });
    callback(arrDesayuno);
-   // console.log(`${doc.id} => ${doc.data().item}.`);
- });
+   });
 
  export const almuerzo = (callback) =>
  firebase.firestore().collection("almuerzo-cena")

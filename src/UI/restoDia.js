@@ -15,12 +15,13 @@ export const almuerzos = (data) => {
      const btnRetorno = formElement.querySelector('#btn-home');
      const nombre = localStorage.getItem('nombre');
      formElement.querySelector('#cliente').value = nombre;
+     
      // Retorna a inicio
      btnRetorno.addEventListener('click', () => {
      window.location.hash = '#/home';
      });
      return formElement;
-   };
+    };
   
    export const paintAlmuerzo = (dataAlmuerzo) => {
      let listaAlmuerzos = '';
@@ -29,9 +30,9 @@ export const almuerzos = (data) => {
        <div class="container">
        <div id="desayunoo">
        <ul>
-       <button id="text-${doc.item}"> ${doc.item}
+       <button type="button" id="text-${doc.item}"> ${doc.item}
        </button>
-       <button id="text-${doc.item}"> ${doc.precio}
+       <button type="button" id="text-${doc.item}"> ${doc.precio}
        </button>
        </ul>
        </div>
@@ -39,5 +40,6 @@ export const almuerzos = (data) => {
        `;
        listaAlmuerzos +=formPedido;
      });
+       
      return listaAlmuerzos;
-   };
+    };
