@@ -1,3 +1,5 @@
+import {menuPedido} from './menuPedido.js'
+
 export const almuerzos = (data) => {
      const formElement = document.createElement('form');
      const formPedido = `

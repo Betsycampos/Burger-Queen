@@ -28,11 +28,12 @@ button{
 }
 
 .pedido {
-    padding: 0
-} 
+    padding: 0;
+    background: rgb(194, 15, 15);
+    } 
 
 body{
-    background-image: url(../img/burguesa1.jpg);
+    /* background-image: url(../img/burguesa1.jpg); */
     background-size: 100%; 
     background-position: center;
     background-size: auto;
@@ -41,5 +42,8 @@ body{
 
 cite {
     color: blanchedalmond;
+}
+.color-blanco{
+    color: antiquewhite
 }
 /* flex */

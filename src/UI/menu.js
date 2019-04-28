@@ -1,17 +1,26 @@
-import { desayuno } from '../firebase-controller.js';
+import { menuPedido } from './menuPedido.js';
+import {agregarPedido} from '../firebase-controller.js'
 
 export const desayunos = (data) => {
   // console.log(data)
-   const formElement = document.createElement('form');
+   const formElement = document.createElement('section');
    const formPedido = `
    <div>
-   <h2>Menú</h2>
-   <input type="text" id="cliente">
-   <button type="button"id="btn-home">Inicio</button>
-   <div class="container">
-   ${paintDesayuno(data)}
-   </div>
-   </div>`;
+      <h2>Menú</h2>
+       <input type="text" id="cliente">
+         <button type="button"id="btn-home">Inicio</button>
+    <div class="container">
+      <div class="row">
+        <div class="column-6">
+          ${paintDesayuno(data)}
+        </div>
+          <div class="column-6">
+          ${menuPedido}
+          </div>
+         </div>
+       </div>
+    </div>`;
+
    formElement.innerHTML = formPedido
    formElement.setAttribute('id', 'frm-home');
    // Se guarda nombre del cliente
@@ -30,20 +39,23 @@ export const desayunos = (data) => {
    dataDesayuno.forEach((doc) => {
      const formPedido = `
      <div class="container">
-     <div id="desayunoo">
-     <ul>
-     <button type="button" id="text-${doc.item}"> ${doc.item}
-     </button>
-     <button type="button" id="text-${doc.item}"> ${doc.precio}
-     </button>
-     </ul>
-     </div>
+        <div class="row">
+          <div class="column-6">
+            <div class="d-flex flex-row" id="desayuno">
+               <p type="button" id="text-${doc.item}"> ${doc.item}..........    S/.${doc.precio}.00
+               </p>
+                <button class="pedido color-blanco" id="agregar-${doc.item}">AGREGAR</button>
+             </div>
+          </div>
+       </div>
      </div>
      `;
      listaDesayunos +=formPedido;
+     const agregarPed = document.getElementById(`agregar-${doc.item}`);
+       agregarPed.addEventListener('click', () => {
+       agregarPedido(dataDesayuno);
+      });
    });
- 
- 
    return listaDesayunos;
  };
  /**
