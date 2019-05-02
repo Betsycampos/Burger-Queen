@@ -19,11 +19,11 @@ export const desayuno = (callback) =>
    // console.log(`${doc.id} => ${doc.data().item}.`);
  });
 
- export const agregarPedido = (data) => {
-   const arrPedido = [];
-   const pedidoTotal = arrPedido.push(...data);
-    return pedidoTotal;
-  }
+//  export const agregarPedido = (data) => {
+//    const arrPedido = [];
+//    const pedidoTotal = arrPedido.push(...data);
+//     return pedidoTotal;
+//   };
 
 
 // export const menuAlmuerzo = (callback) =>
