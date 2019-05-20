@@ -21,7 +21,9 @@ export const menuPedido = (objtPedido) => {
        </tbody>
    </table>
      <span>${objtPedido.total}</span>
-  `
+  `;
+
+formPedido +=formPedido;
   // return formPedido;
   console.log(formPedido);
 };

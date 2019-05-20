@@ -42,7 +42,7 @@ export const paintDesayuno = (dataDesayuno) => {
         <div class="row">
           <div class="column-6">
             <div class="d-flex flex-row" id="desayuno">
-               <p type="button" id="text-${doc.item}"> ${doc.item}..........    S/.${doc.precio}.00
+               <p type="button" id="text-${doc.item}"> ${doc.item}..........S/.${doc.precio}.00
                </p>
                 <button class="pedido color-blanco" id="agregar-${doc.item}">AGREGAR</button>
              </div>
@@ -51,12 +51,20 @@ export const paintDesayuno = (dataDesayuno) => {
      </div>
      `;
      listaDesayunos +=formPedido;
-   
    });
    return listaDesayunos;
 };
+
+export const mostrarPedidos = () => {
+  
+}
+
   
 /**
 * 
+
+     const pedido = document.getElementById('agregar-${doc.item}')
+     pedido.innerHTML= paintDesayuno(dataDesayuno);
+   
 * 
 */

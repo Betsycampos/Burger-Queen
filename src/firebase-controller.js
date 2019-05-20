@@ -3,7 +3,13 @@ export const desayuno = (callback) =>
  .onSnapshot((querySnapshot) => {
    const arrDesayuno = [];
    querySnapshot.forEach((doc) => {
-     arrDesayuno.push({id: doc.id, ...doc.data()});
+     arrDesayuno.push({ 
+        id: doc.data().id,
+        item: doc.data().item,
+        precio: doc.data().precio,
+        tipo: doc.data().tipo
+      });
+     
    });
    callback(arrDesayuno);
    });
